@@ -1,10 +1,10 @@
 const { assert } = require("chai");
 
 describe("Token", function() {
-  const initialSupply = ethers.utils.parseEther("1000");
+  const initialSupply = ethers.utils.parseEther("2000");
   let token;
   beforeEach(async () => {
-    const DOGToken = await ethers.getContractFactory("DOGToken");
+    const DOGToken = await ethers.getContractFactory("LBSToken");
     token = await DOGToken.deploy(initialSupply);
     await token.deployed();
   });

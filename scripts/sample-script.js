@@ -1,6 +1,6 @@
 async function main() {
   const Token = await hre.ethers.getContractFactory("DOGToken");
-  const initialSupply = hre.ethers.utils.parseEther("1000");
+  const initialSupply = hre.ethers.utils.parseEther("2000");
   const token = await Token.deploy(initialSupply);
   await token.deployed();
 
